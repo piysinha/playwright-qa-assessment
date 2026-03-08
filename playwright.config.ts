@@ -7,7 +7,7 @@ export default defineConfig({
   globalSetup: './global-setup',
 
   reporter: [
-    ['html', { open: 'never' }]
+    ['html', { outputFolder: 'playwright-report', open: 'never' }]
   ],
 
   use: {
