@@ -11,7 +11,7 @@ export default defineConfig({
   ],
 
   use: {
-    headless: false,
+    headless: true,
     baseURL: 'https://www.saucedemo.com',
     storageState: 'storageState.json',
     trace: 'on-first-retry',
