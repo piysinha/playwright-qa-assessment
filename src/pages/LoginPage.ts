@@ -19,7 +19,6 @@ export class LoginPage {
     await this.page.goto('/');
   }
 
-  //Check for error message
   async getErrorMessage() {
     return await this.errorMsg.textContent();
   }
