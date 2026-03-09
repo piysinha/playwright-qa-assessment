@@ -11,6 +11,8 @@ test('GET users', async ({ request }) => {
     }
   });
 
+  //Testing environment variable
+
   // console.log(process.env.REQRES_API_KEY);
 
   expect(response.status()).toBe(200);
