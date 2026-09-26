@@ -30,7 +30,9 @@ test.describe('SauceDemo UI Tests', () => {
     await inventory.addFirstTwoItems();
     await inventory.goToCart();
 
-    expect(await cart.getCartItemsCount()).toBe(2);
+    // A web-first assertion: it waits for the cart page to show the items, instead of
+    // counting once, right after the click, before the cart has rendered.
+    await expect(cart.items).toHaveCount(2);
   });
 
   test('Complete checkout flow', async ({ page }) => {

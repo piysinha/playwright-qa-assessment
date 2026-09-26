@@ -1,10 +1,10 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export class CartPage {
-  constructor(private page: Page) {}
+  readonly items: Locator;
 
-  async getCartItemsCount() {
-    return this.page.locator('.cart_item').count();
+  constructor(private page: Page) {
+    this.items = page.locator('.cart_item');
   }
 
   async checkout() {
