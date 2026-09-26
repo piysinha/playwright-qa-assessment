@@ -4,8 +4,6 @@ export default defineConfig({
   testDir: './tests',
   retries: 1,
 
-  globalSetup: './global-setup',
-
   reporter: [
     ['html', { outputFolder: 'playwright-report', open: 'never' }]
   ],
@@ -13,7 +11,6 @@ export default defineConfig({
   use: {
     headless: true,
     baseURL: 'https://www.saucedemo.com',
-    storageState: 'storageState.json',
     trace: 'on-first-retry',
   },
 });
