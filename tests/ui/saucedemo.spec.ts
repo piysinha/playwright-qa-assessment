@@ -20,7 +20,8 @@ test.describe('SauceDemo UI Tests', () => {
     const prices = await inventory.getAllPrices();
     const sorted = [...prices].sort((a, b) => a - b);
 
-    expect(prices[0]).toBe(sorted[0]);
+    expect(prices.length).toBeGreaterThan(1);
+    expect(prices).toEqual(sorted);
   });
 
   test('Add 2 items to cart', async ({ page }) => {
