@@ -3,3 +3,4 @@ playwright-report
 test-results
 .env
 storageState.json
+.DS_Store

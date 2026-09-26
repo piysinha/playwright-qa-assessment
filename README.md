@@ -17,15 +17,11 @@ npx playwright test
 npx playwright test tests/ui
 npx playwright test tests/api
 
-## Note
+## API key
 
-Missing API key error
+The API tests need a reqres.in API key. Create a `.env` file in the project root containing:
 
-1. Ensure to create the .env file and contains:
+REQRES_API_KEY=your_api_key
 
-2. REQRES_API_KEY=your_api_key
-
-3. Once done install a dependency
-
-4. npm install dotenv
+`.env` is git-ignored, so the key is never committed.
 

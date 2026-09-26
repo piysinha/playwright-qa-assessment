@@ -11,9 +11,6 @@ test('GET users', async ({ request }) => {
     }
   });
 
-
-// console.log(process.env.REQRES_API_KEY);
-
   expect(response.status()).toBe(200);
 
   const body: UsersResponse = await response.json();
